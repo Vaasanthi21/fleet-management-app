@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+    
+    <nav class="navbar">
+        <h1>Fleet Dashboard</h1>
+        <div class="filters">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter">
+                <option value="All">All</option>
+                <option value="Auto">Auto</option>
+                <option value="Car">Car</option>
+                <option value="Truck">Truck</option>
+                <option value="Bus">Bus</option>
+            </select>
+
+            <label for="availabilityFilter">Availability:</label>
+            <select id="availabilityFilter">
+                <option value="All">All</option>
+                <option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>
+            </select>
+            
+            <button id="clearFilterBtn">Clear Filters</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h3>Add New Fleet</h3>
+            <form id="addFleetForm">
+                <div class="form-group">
+                    <label for="regNo">Reg No of Vehicle:</label>
+                    <input type="text" id="regNo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Car">Car</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Bus">Bus</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="driverName">Driver Name:</label>
+                    <input type="text" id="driverName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="isAvailable">Availability:</label>
+                    <select id="isAvailable" required>
+                        <option value="Available">Available</option>
+                        <option value="Unavailable">Unavailable</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Add Fleet</button>
+            </form>
+        </aside>
+
+        <main class="main-content">
+            <div id="fleetCardsContainer" class="fleet-grid">
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
