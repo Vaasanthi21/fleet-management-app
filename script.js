@@ -192,4 +192,5 @@ function loadFleetData() {
         fleetData = JSON.parse(savedData);
     }
     renderFleetCards();
+
 }
